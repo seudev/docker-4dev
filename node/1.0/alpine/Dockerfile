@@ -10,6 +10,7 @@ RUN apk add --no-cache openssh \
 
 RUN npm i -g --unsafe-perm nwb
 RUN npm i -g firebase-tools
+RUN npm i -g surge
 
 ARG ENV_CONFIG_VERSION=v1.0.0
 
