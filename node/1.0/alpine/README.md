@@ -1,5 +1,7 @@
 # Node 4dev
 
+[![docker-4dev](http://dockeri.co/image/seudev/node-4dev)](https://hub.docker.com/r/seudev/node-4dev)
+
 ## What is it?
 
 A Docker image for developers that use node
@@ -12,6 +14,7 @@ This image has the below resources:
 * git
 * [Nwb](https://github.com/insin/nwb)
 * [Firebase Tools](https://firebase.google.com/docs/cli)
+* [Surge](https://surge.sh)
 * Shell Scripts
   * [add-ssh-key](https://github.com/seudev/env-config#add-ssh-key)
   * [set-git-config](https://github.com/seudev/env-config#set-git-config)
@@ -19,8 +22,32 @@ This image has the below resources:
 
 ## Using Node 4dev
 
-```
+```sh
 docker run -ti --rm -p 3000:3000 -v `pwd`:/usr/src/app seudev/node-4dev:1.0-alpine
+```
+
+### Using to deploy on Firebase
+
+```
+docker run -ti --rm -p 3000:3000 -e FIREBASE_TOKEN="$FIREBASE_TOKEN" -v `pwd`:/usr/src/app seudev/node-4dev:1.0-alpine
+```
+
+Executes in the container:
+
+```
+firebase deploy --token "$FIREBASE_TOKEN"
+```
+
+### Using to deploy on Surge
+
+```
+docker run -ti --rm -p 3000:3000 -e SURGE_TOKEN="$SURGE_TOKEN" -v `pwd`:/usr/src/app seudev/node-4dev:1.0-alpine
+```
+
+Executes in the container:
+
+```
+surge --token "$SURGE_TOKEN" --domain my-project.surge.sh --project build
 ```
 
 ### Building this image:
