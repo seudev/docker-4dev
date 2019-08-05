@@ -7,6 +7,7 @@ A Docker images set for developers.
 ## Available Images
 
 * [seudev/node-4dev:1.0-alpine](node/1.0/alpine/README.md)
+* [seudev/node-4dev:1.1-alpine](node/1.1/alpine/README.md)
 
 ## Licensing
 
