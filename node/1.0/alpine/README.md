@@ -26,33 +26,45 @@ This image has the below resources:
 docker run -ti --rm -p 3000:3000 -v `pwd`:/usr/src/app seudev/node-4dev:1.0-alpine
 ```
 
+## Using to commit with local config
+
+```sh
+docker run -ti --rm -p 3000:3000 -e GIT_USER_NAME="$(git config --get user.name)" -e GIT_USER_EMAIL="$(git config --get user.email)" -v `pwd`:/usr/src/app seudev/node-4dev:1.0-alpine
+```
+
+Executes in the container:
+
+```sh
+set-git-config
+```
+
 ### Using to deploy on Firebase
 
-```
+```sh
 docker run -ti --rm -p 3000:3000 -e FIREBASE_TOKEN="$FIREBASE_TOKEN" -v `pwd`:/usr/src/app seudev/node-4dev:1.0-alpine
 ```
 
 Executes in the container:
 
-```
+```sh
 firebase deploy --token "$FIREBASE_TOKEN"
 ```
 
 ### Using to deploy on Surge
 
-```
+```sh
 docker run -ti --rm -p 3000:3000 -e SURGE_TOKEN="$SURGE_TOKEN" -v `pwd`:/usr/src/app seudev/node-4dev:1.0-alpine
 ```
 
 Executes in the container:
 
-```
+```sh
 surge --token "$SURGE_TOKEN" --domain my-project.surge.sh --project build
 ```
 
 ### Building this image:
 
-```
+```sh
 docker build -t seudev/node-4dev:1.0-alpine .
 ```
 
