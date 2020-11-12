@@ -12,7 +12,10 @@ This image has the below resources:
 
 * ssh
 * git
+* [gopls](https://github.com/golang/tools/tree/master/gopls)
+* [delve](https://github.com/go-delve/delve)
 * [cobra](https://github.com/spf13/cobra)
+* [go-bindata](https://github.com/go-bindata/go-bindata)
 * Shell Scripts
   * [add-ssh-key](https://github.com/seudev/env-config/tree/v1.2.0#add-ssh-key)
   * [set-git-config](https://github.com/seudev/env-config/tree/v1.2.0#set-git-config)

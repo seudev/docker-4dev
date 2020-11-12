@@ -8,9 +8,13 @@ LABEL vendor="Seudev" \
 RUN apt-get update && apt-get install -y \
     ssh \
     git \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
-RUN go get -u github.com/spf13/cobra/cobra \
+RUN go get -u golang.org/x/tools/gopls \
+    && go get -u github.com/go-delve/delve/cmd/dlv \
+    && go get -u github.com/spf13/cobra/cobra \
+    && go get -u github.com/go-bindata/go-bindata/... \
     && go clean --modcache
 
 ARG ENV_CONFIG_VERSION="v1.2.0"
