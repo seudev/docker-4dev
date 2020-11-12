@@ -12,6 +12,7 @@ This image has the below resources:
 
 * ssh
 * git
+* vim
 * Shell Scripts
   * [add-ssh-key](https://github.com/seudev/env-config/tree/v1.2.0#add-ssh-key)
   * [set-git-config](https://github.com/seudev/env-config/tree/v1.2.0#set-git-config)

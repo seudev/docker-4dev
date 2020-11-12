@@ -8,6 +8,7 @@ LABEL vendor="Seudev" \
 RUN apt-get update && apt-get install -y \
     ssh \
     git \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 ARG ENV_CONFIG_VERSION="v1.2.0"
