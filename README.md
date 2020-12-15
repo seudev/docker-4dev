@@ -16,6 +16,7 @@ A Docker images set for developers.
     * [seudev/node-4dev:1.1-alpine](node/1.1/alpine/README.md)
     * [seudev/node-4dev:1.2-alpine](node/1.2/alpine/README.md)
     * [seudev/node-4dev:1.3-alpine](node/1.3/alpine/README.md)
+    * [seudev/node-4dev:1.4](node/1.4/README.md)
 * seudev/vscode-ext-4dev
     * [seudev/vscode-ext-4dev:1.0-alpine](vscode-ext/1.0/alpine/README.md)
 
